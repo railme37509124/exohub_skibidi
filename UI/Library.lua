@@ -317,12 +317,11 @@ function ibrary:Make(v, props)
 		else
 			TS:Create(Frame, TweenInfo.new(0.34, Enum.EasingStyle.Quart), {Size = u2(0, textbounds2, 0, 60)}):Play()
 		end
-
-		-- Wait the specificed duration, or 10 seconds if not chosen
-		task.wait(props.Duration or 10)
-
-		-- Destroy the notification after it is done waiting the duration
 		spawn(function()
+			-- Wait the specificed duration, or 10 seconds if not chosen
+			task.wait(props.Duration or 10)
+
+			-- Destroy the notification after it is done waiting the duration
 			local destroyTween = TS:Create(Frame, TweenInfo.new(0.23, Enum.EasingStyle.Quart), {Size = u2(0, 0, 0, 60)})
 			destroyTween:Play()
 			destroyTween.Completed:Wait()
@@ -1223,4 +1222,4 @@ function ibrary:Make(v, props)
 	end
 end
 
-return ibrary
+return ibrary	
