@@ -40,4 +40,4 @@ function Api:LoadFile(file) if (isfile(file)) then return loadfile and loadfile(
 function Api.Assign(g, new) if (getfenv[tostring(g)]) then getfenv()[tostring(n)] = new end end
 function Api.Store(i, v) if (store == nil) then store = {} end store[i] = v end
 function Api.ApiRetrieved() if (not CAPIAR_B) then CAPIAR_B = true end return (CAPIAR_B) end
-return{GetApi = function()local ApiRetrievedTime = Api.Time()function Api.GetApiRetrievedTime()return ApiRetrievedTime;endwarn("\n\n----------------------\n\tRetrieved Api\n----------------------\n\n")return(Api)end};
+return{GetApi = function()local ApiRetrievedTime = Api.Time()function Api.GetApiRetrievedTime()return ApiRetrievedTime;end;warn("\n\n----------------------\n\tRetrieved Api\n----------------------\n\n")return(Api)end};
