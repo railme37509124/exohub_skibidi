@@ -1050,7 +1050,7 @@ function ibrary:Make(v, props)
 										ZIndex = 2,
 										Font = Enum.Font.Arimo,
 										TC3 = cRGB{177},
-										Text = "  " .. (props.Def or "None"),
+										Text = "  " .. (tostring(props.Def) or "None"),
 										TextXAlignment = Enum.TextXAlignment.Left,
 										TextSize = 14
 									})
