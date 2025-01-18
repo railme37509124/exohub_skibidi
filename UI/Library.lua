@@ -888,6 +888,8 @@ function ibrary:Make(v, props)
 										CanvasSize = uFromSc(0, 0),
 										ScrollBarThickness = 0,
 										Active = true,
+										AutomaticCanvasSize = Enum.AutomaticSize.Y,
+										ScrollingDirection = Enum.ScrollingDirection.Y,
 										Name = "S"
 									}, {
 										create("UIListLayout", {
