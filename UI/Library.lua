@@ -1059,6 +1059,7 @@ function ibrary:Make(v, props)
 						})
 
 						table.insert(Section.Items, DropDown)
+						return {Reresh=refresh}
 					end
 					function Section:AddTextBox(props)
 						local TextBox
