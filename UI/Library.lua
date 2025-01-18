@@ -901,11 +901,11 @@ function ibrary:Make(v, props)
 								})
 							})
 						})
-						
+
 						local function refresh(newarray)
 							-- Remove other items
 							for _, Item in pairs(DropDownMenu.BG.X.S:GetChildren()) do if Item:IsA("TextButton") then destroy(Item) end end
-							
+
 							-- And now add the new ones
 							for _, Item in pairs(newarray or {}) do
 								local ItemButton
@@ -951,8 +951,9 @@ function ibrary:Make(v, props)
 													TS:Create(n.img1.img2.img3, TweenInfo.new(0.2, Enum.EasingStyle.Quart), {ImageColor3 = cRGB{18}}):Play()
 												end
 											end
-											
+
 											V = Item
+											DropDown.Frame.Frame.TextLabel.Text = "  " .. tostring(Item)
 											TS:Create(ItemButton.img1.img2.img3, TweenInfo.new(0.2, Enum.EasingStyle.Quart), {ImageColor3 = UiTheme or cRGB{255, 87, 87}}):Play()
 											props.Function(Item)
 										end,
@@ -997,7 +998,7 @@ function ibrary:Make(v, props)
 						end
 						refresh(props.Array)
 
-						
+
 						DropDown = roundedFrame(7, {
 							BG3 = cRGB{31},
 							Size = UDim2.new(1, 0, 0, 40),
@@ -1061,7 +1062,7 @@ function ibrary:Make(v, props)
 						})
 
 						table.insert(Section.Items, DropDown)
-						return {Reresh=refresh}
+						return {Refresh=refresh}
 					end
 					function Section:AddTextBox(props)
 						local TextBox
@@ -1225,4 +1226,4 @@ function ibrary:Make(v, props)
 	end
 end
 
-return ibrary	
+return ibrary
