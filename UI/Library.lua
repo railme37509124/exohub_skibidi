@@ -41,7 +41,7 @@ local services = setmetatable({}, {
 local RS = services.RunService
 local P = services.Players.LocalPlayer
 local HTTP = services.HttpService
-local UIS = game:GetService("UserInputService")
+local UIS = services.UserInputService
 local TS = services.TweenService
 
 local function addDrag(Frame)
